@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        BITHockeyManager.shared().configure(withIdentifier: "313afed46a504f509f1bdefdaee883f8");
+        BITHockeyManager.shared().start();
+        BITHockeyManager.shared().authenticator.authenticateInstallation(); // This line is obsolete in the crash only builds
         return true
     }
 

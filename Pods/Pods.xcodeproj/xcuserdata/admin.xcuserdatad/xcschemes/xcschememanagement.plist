@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TestHockeyApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TestHockeyAppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TestHockeyAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>163D73483BD7C93374815469678169EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C014F737BF0E4D82F49D1E8DBB98C79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A87CD1A2183A650C8A33F3F074FC7AF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA093F16AF073441FEBF361A485813A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
