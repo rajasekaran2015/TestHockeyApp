@@ -178,7 +178,6 @@
 				84E996F21D22AFEE00FE085F /* Resources */,
 				FEF51FF3F7647555D681C0FB /* [CP] Embed Pods Frameworks */,
 				4DEECB7C6DEEE57F399FCD85 /* [CP] Copy Pods Resources */,
-				848A65F41D241AA4004DA825 /* Auto Update Build Version No - Script */,
 			);
 			buildRules = (
 			);
@@ -339,20 +338,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestHockeyApp/Pods-TestHockeyApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		848A65F41D241AA4004DA825 /* Auto Update Build Version No - Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Auto Update Build Version No - Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n# This splits a two-decimal version string, such as \"0.45.123\", allowing us to increment the third position.\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\necho \"Committing the build number...\"\ncd ${PROJECT_DIR};git add ${PROJECT_DIR}/${INFOPLIST_FILE}\ncd ${PROJECT_DIR};git commit -m \"Bumped the build number.\"\ncd ${PROJECT_DIR};git push -u origin master\necho \"Build number committed.\"\n";
 		};
 		8D9EFBFABD73B1F8A2D98AEF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
